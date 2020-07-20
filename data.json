@@ -1,7 +1,7 @@
 {
 	"items": [
 		{
-			"title": "Box title 1",
+			"title": "Box iterms",
 			"subtitle": "Subtitle 1",
 			"counter": 5,
 			"highlight": "Error",
@@ -16,7 +16,7 @@
 			"type": "Active"
 		},
 		{
-			"title": "Box title 3",
+			"title": "Box item3",
 			"subtitle": "Subtitle 3",
 			"counter": 15734,
 			"busy": true
