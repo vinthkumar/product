@@ -1,99 +1,67 @@
 {
 	"ProductCollection": [
 		{
-			"ProductId": "HT-1000",
-			"Category": "Desktop Computers",
-			"MainCategory": "Computer Systems",
-			"TaxTarifCode": "1",
-			"SupplierName": "Titanium",
-			"WeightMeasure": 4.2,
-			"WeightUnit": "KG",
-			"Description": "Notebook Basic 15 with 2,80 GHz quad core, 15\" LCD, 4 GB DDR3 RAM, 500 GB Hard Disc, Windows 8 Pro",
-			"Name": "Notebook Basic 15",
-			"DateOfSale": "2017-03-26",
-			"ProductPicUrl": "https://openui5.hana.ondemand.com/test-resources/sap/ui/documentation/sdk/images/HT-1000.jpg",
+			"ProductId": "https://tamilbloggers.net",
+			"Name": "Site Name",
+			"Category": "Projector",
+			"SupplierName": "run",
+			
+			
+			"Price":"success",
 			"Status": "Available",
-			"Quantity": 10,
-			"UoM": "PC",
-			"CurrencyCode": "EUR",
-			"Price": 956,
-			"Width": 30,
-			"Depth": 18,
-			"Height": 3,
-			"DimUnit": "cm"
-		},
+			"Quantity": 3
+			
+			
 		
-		
-		{
-			"ProductId": "HT-1007",
-			"Category": "Accessories",
-			"MainCategory": "Computer Components",
-			"TaxTarifCode": "1",
-			"SupplierName": "Technocom",
-			"WeightMeasure": 0.2,
-			"WeightUnit": "KG",
-			"Description": "Digital Organizer with State-of-the-Art Storage Encryption",
-			"Name": "ITelO Vault",
-			"DateOfSale": "2017-05-17",
-			"ProductPicUrl": "https://openui5.hana.ondemand.com/test-resources/sap/ui/documentation/sdk/images/HT-1007.jpg",
-			"Status": "Available",
-			"Quantity": 15,
-			"UoM": "PC",
-			"CurrencyCode": "EUR",
-			"Price": 299,
-			"Width": 32,
-			"Depth": 22,
-			"Height": 3,
-			"DimUnit": "cm"
-		},
-		
-		
-		{
-		
-			"ProductId": "HT-1030",
-			"Category": "Flat Screens",
-			"MainCategory": "Computer Components",
-			"TaxTarifCode": "1",
-			"SupplierName": "Red Point Stores",
-			"WeightMeasure": 21,
-			"WeightUnit": "KG",
-			"Description": "Optimum Hi-Resolution max. 1920 x 1080 @ 85Hz, Dot Pitch: 0.27mm",
-			"Name": "Ergo Screen E-I",
-			"ProductPicUrl": "https://openui5.hana.ondemand.com/test-resources/sap/ui/documentation/sdk/images/HT-1030.jpg",
-			"Status": "Available",
-			"Quantity": 14,
-			"UoM": "PC",
-			"CurrencyCode": "EUR",
-			"Price": 230,
-			"Width": 37,
-			"Depth": 12,
-			"Height": 36,
-			"DimUnit": "cm"
 		},
 	
-		
+		{
+				"ProductId": "https://tamilbloggers.com",
+			"Name": "Site Name",
+			"Category": "Projector",
+			"SupplierName": "fail",
+			
+			
+			"Price":"success",
+			"Status": "Available",
+			"Quantity": 3
+		},
+		{
+				"ProductId": "https://sap.com",
+			"Name": "Site Name",
+			"Category": "Projector",
+			"SupplierName": "run",
+			
+			
+			"Price":"success",
+			"Status": "Available",
+			"Quantity": 3
+		}
 	],
 	"ProductCollectionStats": {
 		"Counts": {
-			"Total": 3,
+			"Total": 14,
 			"Weight": {
-				"Ok": 1,
-				"Heavy": 1,
-				"Overweight": 1
+				"Ok": 7,
+				"Heavy": 5,
+				"Overweight": 2
 			}
 		},
 		"Groups": {
 			"Category": {
-				"Accessories" : 1,
-				"Desktop Computers" : 1,
-				"Flat Screens" : 1,
-				
+				"Projector": 1,
+				"Graphics Card": 2,
+				"Accessory": 4,
+				"Printer": 2,
+				"Monitor": 3,
+				"Laptop": 1,
+				"Keyboard": 1
 			},
 			"SupplierName": {
-				"Titanium": 1,
-				"Technocom": 1,
-				"Red Point Stores": 1,
-				
+				"Titanium": 3,
+				"Technocom": 3,
+				"Red Point Stores": 5,
+				"Very Best Screens": 3
 			}
 		},
 		"Filters": [
@@ -101,37 +69,54 @@
 				"type": "Category",
 				"values": [
 					{
-						"text": "Accessories",
+						"text": "Projector",
 						"data": 1
 					},
 					{
-						"text": "Desktop Computers",
+						"text": "Graphics Card",
+						"data": 2
+					},
+					{
+						"text": "Accessory",
+						"data": 4
+					},
+					{
+						"text": "Printer",
+						"data": 2
+					},
+					{
+						"text": "Monitor",
+						"data": 3
+					},
+					{
+						"text": "Laptop",
 						"data": 1
 					},
 					{
-						"text": "Flat Screens",
+						"text": "Keyboard",
 						"data": 1
-					},
-					
+					}
 				]
 			},
 			{
 				"type": "SupplierName",
 				"values": [
 					{
-					"text": "Titanium",
-					"data": 1
-				  },
-				  {
-					"text": "Technocom",
-					"data": 1
-				  },
-				  {
-					"text": "Red Point Stores",
-					"data": 1
-				  },
-				  
-				  
+						"text": "Titanium",
+						"data": 3
+					},
+					{
+						"text": "Technocom",
+						"data": 3
+					},
+					{
+						"text": "Red Point Stores",
+						"data": 5
+					},
+					{
+						"text": "Very Best Screens",
+						"data": 3
+					}
 				]
 			}
 		]
