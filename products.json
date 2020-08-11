@@ -1,118 +1,46 @@
 {
 	"ProductCollection": [
 		{
-			"ProductId": "https://tamilbloggers.net",
-			"Name": "Site Name",
-			"Category": "Projector",
-			"SupplierName": "run",
-			"Price":"success",
-			"Status": "Available",
-			"Quantity": 3
-			
 			
 		
+			
+			"Running stat": "running",
+			"Name": "https://plnkr.co/plunk/RLJcvd",
+			"Result": "success"
+			
 		},
-	
-		{
-		        "ProductId": "https://tamilbloggers.com",
-			"Name": "Site Name",
-			"Category": "Projector",
-			"SupplierName": "fail",
-			"Price":"success",
-			"Status": "Available",
-			"Quantity": 3
+		
+		
+		{"Running stat": "not running",
+			"Name": "https://waymake.com",
+			"Result": "failed"
 		},
 		{
-			"ProductId": "https://sap.com",
-			"Name": "Site Name",
-			"Category": "Projector",
-			"SupplierName": "run",
-			"Price":"success",
-			"Status": "Available",
-			"Quantity": 3
+			"Running stat": "not running",
+			"Name": "https://tamilblogers.com",
+			"Result": "failed"
+		},
+		
+		{
+			"Running stat": "running",
+			"Name": "https://sap.com",
+			"Result": "success"
 		}
 	],
 	"ProductCollectionStats": {
 		"Counts": {
-			"Total": 14,
-			"Weight": {
-				"Ok": 7,
-				"Heavy": 5,
-				"Overweight": 2
+			"Total": 4,
+			
+		},
+		
+			"Running stat": {
+				"not running": 2,
+				"running": 2,
+				
 			}
 		},
-		"Groups": {
-			"Category": {
-				"Projector": 1,
-				"Graphics Card": 2,
-				"Accessory": 4,
-				"Printer": 2,
-				"Monitor": 3,
-				"Laptop": 1,
-				"Keyboard": 1
-			},
-			"SupplierName": {
-				"Titanium": 3,
-				"Technocom": 3,
-				"Red Point Stores": 5,
-				"Very Best Screens": 3
-			}
-		},
-		"Filters": [
-			{
-				"type": "Category",
-				"values": [
-					{
-						"text": "Projector",
-						"data": 1
-					},
-					{
-						"text": "Graphics Card",
-						"data": 2
-					},
-					{
-						"text": "Accessory",
-						"data": 4
-					},
-					{
-						"text": "Printer",
-						"data": 2
-					},
-					{
-						"text": "Monitor",
-						"data": 3
-					},
-					{
-						"text": "Laptop",
-						"data": 1
-					},
-					{
-						"text": "Keyboard",
-						"data": 1
-					}
-				]
-			},
-			{
-				"type": "SupplierName",
-				"values": [
-					{
-						"text": "Titanium",
-						"data": 3
-					},
-					{
-						"text": "Technocom",
-						"data": 3
-					},
-					{
-						"text": "Red Point Stores",
-						"data": 5
-					},
-					{
-						"text": "Very Best Screens",
-						"data": 3
-					}
-				]
-			}
-		]
+		
+			
+		
 	}
-}
+
