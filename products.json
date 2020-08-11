@@ -11,7 +11,8 @@
 		},
 		
 		
-		{"Running stat": "not running",
+		{
+			"Running stat": "not running",
 			"Name": "https://waymake.com",
 			"Result": "failed"
 		},
@@ -27,18 +28,8 @@
 			"Result": "success"
 		}
 	],
-	"ProductCollectionStats": {
-		"Counts": {
-			"Total": 4,
-			
-		},
-		
-			"Running stat": {
-				"not running": 2,
-				"running": 2,
-				
-			}
-		},
+	
+		}
 		
 			
 		
