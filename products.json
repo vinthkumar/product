@@ -1,5 +1,5 @@
 {
-	"HomePageCollection": [
+	"ProductCollection": [
 		{
 			
 		
@@ -8,28 +8,13 @@
 			"Name": "https://plnkr.co/plunk/RLJcvd",
 			"Result": "success"
 			
-		},
-		
-		
-		{
-			"Running stat": "not running",
-			"Name": "https://waymake.com",
-			"Result": "failed"
-		},
-		{
-			"Running stat": "not running",
-			"Name": "https://tamilblogers.com",
-			"Result": "failed"
-		},
-		
-		{
-			"Running stat": "running",
-			"Name": "https://sap.com",
-			"Result": "success"
 		}
-	],
+		
+		
+		
+	]
 	
 		}
 		
-	}
+	
 
