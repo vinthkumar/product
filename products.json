@@ -5,8 +5,6 @@
 			"Name": "Site Name",
 			"Category": "Projector",
 			"SupplierName": "run",
-			
-			
 			"Price":"success",
 			"Status": "Available",
 			"Quantity": 3
@@ -16,23 +14,19 @@
 		},
 	
 		{
-				"ProductId": "https://tamilbloggers.com",
+		        "ProductId": "https://tamilbloggers.com",
 			"Name": "Site Name",
 			"Category": "Projector",
 			"SupplierName": "fail",
-			
-			
 			"Price":"success",
 			"Status": "Available",
 			"Quantity": 3
 		},
 		{
-				"ProductId": "https://sap.com",
+			"ProductId": "https://sap.com",
 			"Name": "Site Name",
 			"Category": "Projector",
 			"SupplierName": "run",
-			
-			
 			"Price":"success",
 			"Status": "Available",
 			"Quantity": 3
