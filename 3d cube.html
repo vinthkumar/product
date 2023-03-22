@@ -1,0 +1,145 @@
+<html>
+<style>
+.scene {
+  width: 200px;
+  height: 200px;
+  perspective: 600px;
+}
+
+.cube {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  animation-duration: 16s;
+  animation-name: rotate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  pointer-events: none; /* no need for mouse events */
+}
+
+#single_face:checked+.scene .cube {
+  pointer-events: all; /* except if we want to find out who is the front one */
+}
+label,#single_face {float: right}
+@keyframes rotate {
+  from {
+    transform: translateZ(-100px) rotateX( 0deg) rotateY( 0deg);
+  }
+  to {
+    transform: translateZ(-100px) rotateX(360deg) rotateY(720deg);
+  }
+}
+
+.cube__face {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  display: block;
+}
+
+.cube__face--front {
+  background: rgba(255, 0, 0, 0.2);
+  transform: rotateY( 0deg) translateZ(100px);
+}
+
+.cube__face--right {
+  background: rgba(0, 255, 0, 0.2);
+  transform: rotateY( 90deg) translateZ(100px);
+}
+
+.cube__face--back {
+  background: rgba(0, 0, 255, 0.2);
+  transform: rotateY(180deg) translateZ(100px);
+}
+
+.cube__face--left {
+  background: rgba(255, 255, 0, 0.2);
+  transform: rotateY(-90deg) translateZ(100px);
+}
+
+.cube__face--top {
+  background: rgba(0, 255, 255, 0.2);
+  transform: rotateX( 90deg) translateZ(100px);
+}
+
+.cube__face--bottom {
+  background: rgba(255, 0, 255, 0.2);
+  transform: rotateX(-90deg) translateZ(100px);
+}
+</style>
+<body>
+<label>Draw on a single face</label><input type="checkbox" id="single_face">
+<div class="scene">
+  <div class="cube">
+    <canvas class="cube__face cube__face--front"></canvas>
+    <canvas class="cube__face cube__face--back"></canvas>
+    <canvas class="cube__face cube__face--right"></canvas>
+    <canvas class="cube__face cube__face--left"></canvas>
+    <canvas class="cube__face cube__face--top"></canvas>
+    <canvas class="cube__face cube__face--bottom"></canvas>
+  </div>
+</div>
+<pre id="debug"></pre>
+
+<script>
+// will hold our last event's position
+const pos = {
+  x: 0,
+  y: 0
+};
+const canvases = document.querySelectorAll('canvas');
+// A single global "real" MouseEvent handler
+document.body.onmousemove = (e) => {
+  pos.x = e.clientX;
+  pos.y = e.clientY;
+};
+
+canvases.forEach(canvas => {
+  const ctx = canvas.getContext('2d');
+  let count = 0;
+  canvas.addEventListener('mousemove', draw);
+  function draw(e) {
+    // do not fire on real Events
+    if (e.cancelable) return;
+    
+    const x = e.offsetX * canvas.width / canvas.clientWidth;
+    const y = e.offsetY * canvas.height / canvas.clientHeight;
+    
+    if (x < 0 || x > canvas.width || y < 0 || y > canvas.height) {
+      return;
+    }
+    
+    ctx.fillStyle = hsl((count++ % 10) / 10, 1, 0.5);
+    ctx.fillRect(x - 1, y - 1, 3, 3);
+  }
+});
+
+anim();
+
+function anim() {
+  requestAnimationFrame(anim);
+
+  // in case we want to paint only on the front element
+  const front_elem = single_face.checked && document.elementFromPoint(pos.x, pos.y);
+
+  // at every frame
+  canvases.forEach(c => {
+    if (!front_elem || c === front_elem) {
+      // force a composed event (synchronously, so we are still in rAF callback)
+      c.dispatchEvent(
+        new MouseEvent('mousemove', {
+          clientX: pos.x,
+          clientY: pos.y
+        })
+      );
+    }
+  });
+}
+
+function hsl(h, s, l) {
+  return `hsl(${h * 360 | 0},${s * 100 | 0}%,${l * 100 | 0}%)`;
+}
+</script>
+</body>
+</html>
